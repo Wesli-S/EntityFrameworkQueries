@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnSelectAllVendors = new Button();
-            button2 = new Button();
+            btnAllCAVendors = new Button();
             button3 = new Button();
             SuspendLayout();
             // 
@@ -43,18 +43,19 @@
             btnSelectAllVendors.UseVisualStyleBackColor = true;
             btnSelectAllVendors.Click += btnSelectAllVendors_Click;
             // 
-            // button2
+            // btnAllCAVendors
             // 
-            button2.Location = new Point(33, 92);
-            button2.Name = "button2";
-            button2.Size = new Size(145, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnAllCAVendors.Location = new Point(33, 74);
+            btnAllCAVendors.Name = "btnAllCAVendors";
+            btnAllCAVendors.Size = new Size(145, 80);
+            btnAllCAVendors.TabIndex = 1;
+            btnAllCAVendors.Text = "Select * FROM Vendors WHERE VendorState = 'CA' ORDER BY VendorName ASC";
+            btnAllCAVendors.UseVisualStyleBackColor = true;
+            btnAllCAVendors.Click += btnAllCAVendors_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(33, 153);
+            button3.Location = new Point(33, 172);
             button3.Name = "button3";
             button3.Size = new Size(145, 23);
             button3.TabIndex = 2;
@@ -67,7 +68,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnAllCAVendors);
             Controls.Add(btnSelectAllVendors);
             Name = "Form1";
             ResumeLayout(false);
@@ -76,7 +77,7 @@
         #endregion
 
         private Button btnSelectAllVendors;
-        private Button button2;
+        private Button btnAllCAVendors;
         private Button button3;
     }
 }
