@@ -28,17 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnSelectAllVendors = new Button();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
+            // 
+            // btnSelectAllVendors
+            // 
+            btnSelectAllVendors.Location = new Point(33, 34);
+            btnSelectAllVendors.Name = "btnSelectAllVendors";
+            btnSelectAllVendors.Size = new Size(145, 23);
+            btnSelectAllVendors.TabIndex = 0;
+            btnSelectAllVendors.Text = "Select * FROM Vendors";
+            btnSelectAllVendors.UseVisualStyleBackColor = true;
+            btnSelectAllVendors.Click += btnSelectAllVendors_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(33, 92);
+            button2.Name = "button2";
+            button2.Size = new Size(145, 23);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(33, 153);
+            button3.Name = "button3";
+            button3.Size = new Size(145, 23);
+            button3.TabIndex = 2;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(btnSelectAllVendors);
             Name = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnSelectAllVendors;
+        private Button button2;
+        private Button button3;
     }
 }
