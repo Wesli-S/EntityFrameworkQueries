@@ -31,13 +31,14 @@
             btnSelectAllVendors = new Button();
             btnAllCAVendors = new Button();
             btnSelectSpecificColumns = new Button();
+            btnMiscQueries = new Button();
             SuspendLayout();
             // 
             // btnSelectAllVendors
             // 
-            btnSelectAllVendors.Location = new Point(33, 34);
+            btnSelectAllVendors.Location = new Point(33, 25);
             btnSelectAllVendors.Name = "btnSelectAllVendors";
-            btnSelectAllVendors.Size = new Size(145, 23);
+            btnSelectAllVendors.Size = new Size(145, 32);
             btnSelectAllVendors.TabIndex = 0;
             btnSelectAllVendors.Text = "Select * FROM Vendors";
             btnSelectAllVendors.UseVisualStyleBackColor = true;
@@ -63,11 +64,22 @@
             btnSelectSpecificColumns.UseVisualStyleBackColor = true;
             btnSelectSpecificColumns.Click += btnSelectSpecificColumns_Click;
             // 
+            // btnMiscQueries
+            // 
+            btnMiscQueries.Location = new Point(33, 258);
+            btnMiscQueries.Name = "btnMiscQueries";
+            btnMiscQueries.Size = new Size(145, 35);
+            btnMiscQueries.TabIndex = 3;
+            btnMiscQueries.Text = "Misc. Queries";
+            btnMiscQueries.UseVisualStyleBackColor = true;
+            btnMiscQueries.Click += btnMiscQueries_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnMiscQueries);
             Controls.Add(btnSelectSpecificColumns);
             Controls.Add(btnAllCAVendors);
             Controls.Add(btnSelectAllVendors);
@@ -80,5 +92,6 @@
         private Button btnSelectAllVendors;
         private Button btnAllCAVendors;
         private Button btnSelectSpecificColumns;
+        private Button btnMiscQueries;
     }
 }

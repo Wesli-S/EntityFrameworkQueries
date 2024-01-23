@@ -43,17 +43,42 @@ namespace EntityFrameworkQueries
             ApContext dbContext = new();
 
             List<VendorLocation> results = (from v in dbContext.Vendors
-                          select new VendorLocation
-                          {VendorName = v.VendorName, 
-                           VendorState = v.VendorState, 
-                           VendorCity = v.VendorCity
-                          }).ToList();
+                                            select new VendorLocation
+                                            {
+                                                VendorName = v.VendorName,
+                                                VendorState = v.VendorState,
+                                                VendorCity = v.VendorCity
+                                            }).ToList();
             StringBuilder displayString = new StringBuilder();
-            foreach(VendorLocation Vendor in results )
+            foreach (VendorLocation Vendor in results)
             {
                 displayString.AppendLine($"{Vendor.VendorName} is in {Vendor.VendorCity}, {Vendor.VendorState}");
             }
-            MessageBox.Show( displayString.ToString() );
+            MessageBox.Show(displayString.ToString());
+        }
+
+        private void btnMiscQueries_Click(object sender, EventArgs e)
+        {
+            ApContext dbContext = new ApContext();
+
+            //Check if any Vendors exist in Washington State
+            bool doesExist = (from v in dbContext.Vendors
+                              where v.VendorState == "WA"
+                              select v).Any();
+
+
+            //Get number of Invoices
+            int invoiceCount = (from invoice in dbContext.Invoices
+                                select invoice).Count();
+
+            //Select a single vendor
+            Vendor? singleVendor = (from v in dbContext.Vendors
+                          where v.VendorName == "IBM"
+                          select v).SingleOrDefault();
+            if(singleVendor != null) 
+            { 
+                //do something with the vendor object
+            }
         }
     }
 
