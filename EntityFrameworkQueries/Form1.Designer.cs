@@ -30,7 +30,7 @@
         {
             btnSelectAllVendors = new Button();
             btnAllCAVendors = new Button();
-            button3 = new Button();
+            btnSelectSpecificColumns = new Button();
             SuspendLayout();
             // 
             // btnSelectAllVendors
@@ -53,21 +53,22 @@
             btnAllCAVendors.UseVisualStyleBackColor = true;
             btnAllCAVendors.Click += btnAllCAVendors_Click;
             // 
-            // button3
+            // btnSelectSpecificColumns
             // 
-            button3.Location = new Point(33, 172);
-            button3.Name = "button3";
-            button3.Size = new Size(145, 23);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnSelectSpecificColumns.Location = new Point(33, 172);
+            btnSelectSpecificColumns.Name = "btnSelectSpecificColumns";
+            btnSelectSpecificColumns.Size = new Size(145, 71);
+            btnSelectSpecificColumns.TabIndex = 2;
+            btnSelectSpecificColumns.Text = "SELECT VendorName, VendorCity, VendorState FROM Vendors";
+            btnSelectSpecificColumns.UseVisualStyleBackColor = true;
+            btnSelectSpecificColumns.Click += btnSelectSpecificColumns_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
+            Controls.Add(btnSelectSpecificColumns);
             Controls.Add(btnAllCAVendors);
             Controls.Add(btnSelectAllVendors);
             Name = "Form1";
@@ -78,6 +79,6 @@
 
         private Button btnSelectAllVendors;
         private Button btnAllCAVendors;
-        private Button button3;
+        private Button btnSelectSpecificColumns;
     }
 }
